@@ -64,6 +64,7 @@ body{
 .content form .input-box{
     position: relative;
     width: 100%;
+    color:white;
     margin: 0.8em;
 }
 .content form .input-box:last-child{
