@@ -1,20 +1,19 @@
-body{
+/* Original styles for larger screens */
+
+body {
     display: grid;
     place-content: center;
     min-height: 100vh;
-    background-image: linear-gradient(
-        40deg,
-        hsl(231deg 3% 48%) 0%,
-        hsl(230deg 3% 59%) 50%,
-        hsl(228deg 3% 68%) 100%,
-    );
+    background-image: linear-gradient(40deg, hsl(231deg 3% 48%) 0%, hsl(230deg 3% 59%) 50%, hsl(228deg 3% 68%) 100%);
 }
-.wrap{
+
+.wrap {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.wrap .box{
+
+.wrap .box {
     position: relative;
     width: 480px;
     height: 480px;
@@ -28,7 +27,8 @@ body{
       0px 9.1px 9px rgba(0, 0, 0, 0.16);
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 }
-.content{
+
+.content {
     position: relative;
     width: 100%;
     height: 100%;
@@ -36,7 +36,8 @@ body{
     justify-content: center;
     align-items: center;
 }
-.content form{
+
+.content form {
     position: relative;
     width: calc(100% - 4em);
     display: flex;
@@ -45,93 +46,31 @@ body{
     flex-direction: column;
     color: #fff;
 }
-.content form .logo-wrap{
-    width: 70px;
-    height: 70px;
-    background: #fff;
-    color: #313337;
-    font-size: 2em;
-    border-radius: 50%;
-    display: grid;
-    place-content: center;
-    margin-bottom: 0.3em;
-}
-.content form h1{
-    line-height: 1;
-    font-size: 1.75em;
-    margin-bottom: 0.6em;
-}
-.content form .input-box{
-    position: relative;
-    width: 100%;
-    color:white;
-    margin: 0.8em;
-}
-.content form .input-box:last-child{
-    margin-bottom: 0;
-}
-.content form .input-box input{
-    position: relative;
-    width: 100%;
-    padding: 0.625em 0 0.625em 1.5em;
-    background: transparent;
-    font-size: 1em;
-    box-shadow: none;
-    border: none;
-    outline: none;
-    border-bottom: 2px solid #fff;
-}
-.content form .input-box i {
-    position: absolute;
-    left: 0;
-    bottom: 14px;
-    font-size: 1em;
-}
-.content form .input-box span {
-    position: absolute;
-    left: 0;
-    padding: 0.625em 0 0.625em 1.5em;
-    pointer-events: none;
-    opacity: 0.5;
-    transition: 300ms; 
-}
-.content form .input-box input:focus ~ span,
-.content form .input-box input:valid ~ span {
-    transform: translateY(-20px);
-    font-size: 0.9em;
-    background: #fff;
-    color: #212225;
-    opacity: 1;
-    padding: 2px 4px;
-}
-.content form .links{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-.content form .links a{
-    color: #fff;
-    text-decoration: none;
-}
-.content form .links a:hover{
-    text-decoration: underline;
-}
-.content form .input-box input[type="submit"]{
-    background: #fff;
-    color: #111113;
-    border: 2px solid #fff;
-    font-weight: 600;
-    padding: 0.625em;
-    cursor: pointer;
-}
-.content form .input-box input[type="submit"]:hover{
-    background: transparent;
-    color: #fff;
-}
-.input-box{
-    position: relative;
-}
-span{
-    position: absolute;
-    top: 0px;
+
+/* Media query for mobile screens */
+
+@media only screen and (max-width: 600px) {
+    .wrap .box {
+        width: 90%; /* Adjusted width for smaller screens */
+    }
+
+    .content form {
+        width: 90%; /* Adjusted width for smaller screens */
+    }
+
+    .content form .input-box input {
+        padding: 0.5em; /* Adjusted padding for smaller screens */
+    }
+
+    .content form .input-box i {
+        bottom: 10px; /* Adjusted position for smaller screens */
+    }
+
+    .content form .input-box span {
+        padding: 0.5em; /* Adjusted padding for smaller screens */
+    }
+
+    .content form .input-box input[type="submit"] {
+        padding: 0.5em; /* Adjusted padding for smaller screens */
+    }
 }
